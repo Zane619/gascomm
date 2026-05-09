@@ -3,68 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Gas.Comm - LPG Installation Experts</title>
+
   <style>
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #f9f9f9;
       color: #333;
     }
+
     header {
       background-color: #333;
       padding: 20px;
       text-align: center;
     }
+
     header h1 {
       color: orange;
       font-size: 2.5em;
       margin: 0;
     }
+
     nav {
       margin-top: 10px;
     }
+
     nav a {
       color: #fff;
       text-decoration: none;
       margin: 0 15px;
       font-size: 1.1em;
     }
+
+    /* HERO SLIDESHOW */
+
     .hero {
-      background: url('https://images.unsplash.com/photo-1616531773482-2f3937cdb715?crop=entropy&cs=tinysrgb&fit=crop&h=600&w=1200') no-repeat center center/cover;
-      height: 400px;
-      color: white;
+      position: relative;
+      height: 500px;
+      overflow: hidden;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .slide::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
       text-shadow: 1px 1px 5px #000;
     }
+
     .hero h2 {
-      font-size: 2.5em;
+      font-size: 3em;
+      margin-bottom: 10px;
     }
+
     .hero p {
-      font-size: 1.2em;
-      margin-top: 10px;
+      font-size: 1.3em;
     }
+
     section {
-      padding: 40px 20px;
+      padding: 50px 20px;
       text-align: center;
     }
+
     .btn {
       display: inline-block;
       padding: 12px 25px;
       margin-top: 20px;
+      margin-left: 8px;
+      margin-right: 8px;
       background-color: orange;
       color: #fff;
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
-      transition: background 0.3s;
+      transition: 0.3s;
     }
+
     .btn:hover {
       background-color: darkorange;
+      transform: translateY(-2px);
     }
+
     footer {
       background-color: #333;
       color: #ccc;
@@ -72,46 +120,184 @@
       padding: 20px;
       font-size: 0.9em;
     }
+
+    @media(max-width:768px){
+
+      .hero h2{
+        font-size:2em;
+      }
+
+      .hero p{
+        font-size:1em;
+      }
+
+      nav a{
+        display:inline-block;
+        margin:8px;
+      }
+
+    }
+
   </style>
 </head>
+
 <body>
 
 <header>
+
   <h1>Gas.Comm</h1>
+
   <nav>
     <a href="#services">Services</a>
     <a href="#about">About</a>
+    <a href="#partners">Partners</a>
     <a href="#contact">Contact</a>
   </nav>
+
 </header>
 
+<!-- HERO SLIDESHOW -->
+
 <div class="hero">
-  <h2>South Africa’s Trusted LPG Installation Experts</h2>
-  <p>Safe. Reliable. Certified.</p>
-  <a href="#contact" class="btn">Get a Quote</a>
+
+  <div class="slide active"
+  style="background-image:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1600&auto=format&fit=crop');">
+  </div>
+
+  <div class="slide"
+  style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop');">
+  </div>
+
+  <div class="slide"
+  style="background-image:url('https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=1600&auto=format&fit=crop');">
+  </div>
+
+  <div class="hero-content">
+
+    <h2>South Africa’s Trusted LPG Installation Experts</h2>
+
+    <p>
+      Safe. Reliable. Certified.
+      <br>
+      Over 20 Years Of Experience
+    </p>
+
+    <a href="#contact" class="btn">Get a Quote</a>
+
+  </div>
+
 </div>
 
 <section id="services">
+
   <h2>Our Services</h2>
-  <p>We install LPG stoves, geysers,heaters and issue gas compliance certificates.</p>
+
+  <p>
+    We install LPG stoves, geysers, heaters and issue
+    gas compliance certificates across South Africa.
+  </p>
+
 </section>
 
 <section id="about">
+
   <h2>About Gas.Comm</h2>
-  <p>At Gas.Comm, we are passionate about bringing safe and efficient LPG solutions to homes and businesses across South Africa. We are fully licensed, and all our work meets the latest safety standards.</p>
+
+  <p>
+    At Gas.Comm, we are passionate about bringing safe and
+    efficient LPG solutions to homes and businesses across
+    South Africa.
+    <br><br>
+
+    With over <strong>20 years of experience</strong> in the gas
+    industry, we provide trusted LPG installations,
+    gas compliance certificates and professional workmanship
+    you can rely on.
+
+    <br><br>
+
+    We are fully licensed, and all our work meets the latest
+    South African gas safety standards.
+  </p>
+
+</section>
+
+<!-- PARTNERS -->
+
+<section id="partners">
+
+  <h2>Industry Partners & Safety Resources</h2>
+
+  <p>
+    We work alongside trusted South African gas industry
+    organizations and safety bodies.
+  </p>
+
+  <a href="https://www.lpgas.co.za/" target="_blank" class="btn">
+    LPGSA
+  </a>
+
+  <a href="https://saqccgas.co.za/" target="_blank" class="btn">
+    SAQCC Gas
+  </a>
+
+  <a href="https://www.safeappliance.co.za/" target="_blank" class="btn">
+    Safe Appliance Database
+  </a>
+
 </section>
 
 <section id="contact">
+
   <h2>Contact Us</h2>
-  <p>Need a gas installation or a compliance certificate? We’re ready to help!</p>
+
+  <p>
+    Need a gas installation or a compliance certificate?
+    We’re ready to help!
+  </p>
+
   <p><strong>Phone:</strong> 0824411555</p>
+
   <p><strong>Email:</strong> selby-gadd@outlook.com</p>
-  <a href="https://wa.me/27824411555" class="btn">WhatsApp Us</a>
+
+  <a href="https://wa.me/27824411555" class="btn">
+    WhatsApp Us
+  </a>
+
 </section>
 
 <footer>
   &copy; 2026 Gas.Comm | All Rights Reserved
 </footer>
+
+<script>
+
+  let slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+
+  function showSlide(index){
+
+    slides.forEach(slide => {
+      slide.classList.remove('active');
+    });
+
+    slides[index].classList.add('active');
+
+  }
+
+  setInterval(() => {
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+      currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+
+  }, 5000);
+
+</script>
 
 </body>
 </html>
